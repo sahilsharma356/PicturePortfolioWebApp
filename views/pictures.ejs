@@ -1,0 +1,27 @@
+<% include partials/header %>
+
+<div class ="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to My Picture Portfolio!</h1>
+            <p>Enjoy these amazing pictures i've found!</p>
+            
+            <p>
+                <a class="btn btn-primary btn-lrg" href="/new"><i class="fas fa-camera-retro"></i> Add New Picture</a>
+            </p>
+        </div>
+    </header>
+    
+    <div class="row text-center" style="display: flex; flex-wrap:wrap;">
+        <% pictures.forEach(function(picture){ %>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <div class="image-thumb" style="background-image: url(<%= picture.image %>)"></div>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+            
+</div>
+
+<% include partials/footer %> 
